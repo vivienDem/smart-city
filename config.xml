@@ -1,0 +1,27 @@
+<deployment>
+   <hosts>
+    <host name="localhost"
+          dir="./"/>
+  </hosts>
+  <cyclicBarrier   hostname="localhost" port="55253"/>
+  <globalRegistry  hostname="localhost" port="55252"/>
+  <rmiRegistryPort no="55999"/>
+  <jvms2hostnames>
+    <jvm2hostname jvmuri="jvm1"
+        rmiRegistryCreator="true"
+        hostname="localhost"
+        mainclass="bin.cvm.distributed.CVM1"/>
+    <jvm2hostname jvmuri="jvm2"
+        rmiRegistryCreator="false"
+        hostname="localhost"
+        mainclass="bin.cvm.distributed.CVM2"/>
+    <jvm2hostname jvmuri="jvm3"
+        rmiRegistryCreator="false"
+        hostname="localhost"
+        mainclass="bin.cvm.distributed.CVM3"/>
+    <jvm2hostname jvmuri="jvm4"
+        rmiRegistryCreator="false"
+        hostname="localhost"
+        mainclass="bin.cvm.distributed.CVM4"/>
+  </jvms2hostnames>
+</deployment>
